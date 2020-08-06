@@ -1,0 +1,85 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-assertions": 1,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "import/no-dynamic-require": 0,
+    "lines-between-class-members": 0,
+    "no-restricted-globals": [
+      "error",
+      "FunctionExpression",
+      "WithStatement",
+      "BinaryExpression[operator='in']"
+    ],
+    "radix": [
+      1,
+      "as-needed"
+    ],
+    "import/extensions": [
+      2,
+      {
+        "ts": "never"
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 7
+        }
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ]
+  }
+}
