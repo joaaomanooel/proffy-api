@@ -1,3 +1,1 @@
-import db from './connection';
-
-export default db;
+export { default } from './connection';
